@@ -1,0 +1,122 @@
+:root {
+  /* Base theme */
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #F1F5F9;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #6366F1;
+  --accent-bg: rgba(99, 102, 241, 0.1);
+  --accent-border: rgba(99, 102, 241, 0.5);
+  --shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  /* Component tokens — light */
+  --header-bg: #0F172A;
+  --header-text: #F8FAFC;
+  --header-muted: #64748B;
+  --header-surface: #1E293B;
+  --header-border: #334155;
+  --card-bg: #fff;
+  --card-bg-done: #F8FAFC;
+  --card-border: #E2E8F0;
+  --card-text: #1E293B;
+  --text-muted: #94A3B8;
+  --surface: #F8FAFC;
+  --surface-alt: #F1F5F9;
+  --overlay-bg: rgba(15, 23, 42, 0.6);
+  --tab-active: #6366F1;
+
+  /* Typography */
+  --sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 16px/145% var(--sans);
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Dark mode (manual toggle) ─────────────────────────── */
+:root.dark {
+  --text: #9ca3af;
+  --text-h: #f3f4f6;
+  --bg: #0f1117;
+  --border: #2e303a;
+  --code-bg: #1f2028;
+  --accent: #818cf8;
+  --accent-bg: rgba(129, 140, 248, 0.15);
+  --accent-border: rgba(129, 140, 248, 0.5);
+  --shadow: rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+
+  --header-bg: #0a0c10;
+  --header-text: #f3f4f6;
+  --header-muted: #6b7280;
+  --header-surface: #1a1c24;
+  --header-border: #2e303a;
+  --card-bg: #1a1c24;
+  --card-bg-done: #14161c;
+  --card-border: #2e303a;
+  --card-text: #e5e7eb;
+  --text-muted: #6b7280;
+  --surface: #14161c;
+  --surface-alt: #1a1c24;
+  --overlay-bg: rgba(0, 0, 0, 0.7);
+  --tab-active: #818cf8;
+}
+
+/* ─── System preference fallback ────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light):not(.dark) {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #0f1117;
+    --border: #2e303a;
+    --code-bg: #1f2028;
+    --accent: #818cf8;
+    --accent-bg: rgba(129, 140, 248, 0.15);
+    --accent-border: rgba(129, 140, 248, 0.5);
+    --shadow: rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+
+    --header-bg: #0a0c10;
+    --header-text: #f3f4f6;
+    --header-muted: #6b7280;
+    --header-surface: #1a1c24;
+    --header-border: #2e303a;
+    --card-bg: #1a1c24;
+    --card-bg-done: #14161c;
+    --card-border: #2e303a;
+    --card-text: #e5e7eb;
+    --text-muted: #6b7280;
+    --surface: #14161c;
+    --surface-alt: #1a1c24;
+    --overlay-bg: rgba(0, 0, 0, 0.7);
+    --tab-active: #818cf8;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  max-width: 100%;
+  margin: 0;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  font-family: var(--sans);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+p {
+  margin: 0;
+}
